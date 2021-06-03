@@ -19,19 +19,37 @@
   <input type="text" id="lname" name="lname" value=""><br><br>
   <input type="submit" value="Submit">
 </form> 
-
 <a href="http://www.dkasc.ac.in/uploads/Online%20Admission%2020-21/Merit-Lists/B.A.-I-Merit-List-1-15-08-20.pdf">Merit LIST</a>
 
-		
-		
-		
-		<p><b>Topper</b></p>
-		<p>Ranjit Shirote : 110 % </p>
-		<p>Aditya Upadhey : 98 % </p>
-		
+<p>Topper is from CLASSMATE WHATS UP GROUP ...:)</p>
 
+	<p>Ranjit Shirote  110 % </p>
+		<p>Ganesh Jashav  105 %</p>
 
+<div id="piechart"></div>
 
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Completed'],
+  ['PASS', 90],
+  ['FAIL', 10]
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'Pass / FAil Ratio', 'width':550, 'height':400};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+</script>
 	</body>
 </html>
